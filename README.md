@@ -5,7 +5,7 @@ Data come from the SteamGifts [bundle games](https://www.steamgifts.com/bundle-g
 
 ## Usage
 
-1. Download this [file](dist/esgst_data.min.json) to your computer
+1. Download this [file](dist/esgst_data.zip) to your computer
 2. Visit https://www.steamgifts.com/account/settings/profile?esgst=restore
 3. Select Games and Games → Main
 4. Select Settings to update the last reduced/no CV games sync timestamp.
