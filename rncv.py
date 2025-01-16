@@ -70,10 +70,11 @@ def update_rncv():
     for setting in ["lastSyncReducedCvGames", "lastSyncNoCvGames"]:
         esgst_data["settings"][setting] = round(updateded_timestamp * 1000)
     os.makedirs("dist", exist_ok=True)
-    with open("dist/esgst_data.json", "w", encoding="utf-8") as f:
+    file_spec = {"mode": "w", "encoding": "utf-8", "newline": "\n"}
+    with open("dist/esgst_data.json", **file_spec) as f:
         # For archiving purposes
         json.dump(esgst_data, f, indent=2, sort_keys=True)
-    with open("dist/esgst_data.min.json", "w", encoding="utf-8") as f:
+    with open("dist/esgst_data.min.json", **file_spec) as f:
         json.dump(esgst_data, f, separators=(",", ":"))
     logger.info("Done!")
 
