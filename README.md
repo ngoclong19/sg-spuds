@@ -15,6 +15,15 @@ Data come from the SteamGifts [bundle games](https://www.steamgifts.com/bundle-g
 8. Browse to the downloaded `esgst_data.min.json` file
 9. When asked, "Are you sure you want to restore the selected data?", select Yes.
 
+### Caveats
+
+Currently, there is no tracking mechanism.
+If the reduced or no CV date is removed from SteamGifts, the corresponding data may not be removed from the ESGST add-on.
+
+In the tooltip of Reduced and No CV game categories, the date format is `2025-01-16` instead of `Jan 16, 2025`.
+ESGST stores these dates as local time.
+Since our timezones differ, the data file will supply date in UTC time and let JavaScript do its magic.
+
 ## Data file generation
 
 If you want to generate the data file on your local machine, please follow this section.
