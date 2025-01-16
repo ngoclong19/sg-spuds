@@ -13,7 +13,7 @@ import requests
 def date_from_sever(timestamp: int) -> str:
     """Return `'YYYY-MM-DD'` from a POSIX timestamp."""
     dt = datetime.datetime.fromtimestamp(timestamp, tz=datetime.UTC)
-    return dt.isoformat()[:10]
+    return dt.strftime("%Y-%m-%d %Z")
 
 
 def update_rncv():

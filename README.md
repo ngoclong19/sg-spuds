@@ -20,7 +20,7 @@ Data come from the SteamGifts [bundle games](https://www.steamgifts.com/bundle-g
 Currently, there is no tracking mechanism.
 If the reduced or no CV date is removed from SteamGifts, the corresponding data may not be removed from the ESGST add-on.
 
-In the tooltip of Reduced and No CV game categories, the date format is `2025-01-16` instead of `Jan 16, 2025`.
+In the tooltip of Reduced and No CV game categories, the date format and timezone are `2025-01-16 UTC` (UTC time) instead of `Jan 16, 2025` (local time).
 ESGST stores these dates as local time.
 Since our timezones differ, the data file will supply date in UTC time and let JavaScript do its magic.
 
